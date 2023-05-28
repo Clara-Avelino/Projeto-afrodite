@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    margin: 3px;
+    flex: 1 1 100vw;
+    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #352657;
+}
+header, nav, main, aside, footer {
+    display: flex;
+    margin: 3px; 
+}
+header, footer{
+    background-color: #352657;
+}
+main, aside{
+    background-color: rgba(38, 17, 85, 0.244)
+}
+header{
+    flex: 1 1 100vw;
+    height: 150px;
+}
+header #logo {
+    flex: 0 1 200px;
+    background-color: #352657;
+    text-align: center;
+}
+#openMenu, #closeMenu{
+    border: none;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0px 5px 0px 5px;
+    cursor: pointer;
+    display: none;
+}
+
+nav{  
+    flex: 1 1 100vw;
+    align-items: center;
+    justify-content: flex-end;
+}
+nav a{
+    margin: 2.5%;
+    font-size: 17pt;
+}
+main{
+    flex: 20 1 500px;
+     height: calc(100vw - 224px); 
+     height: 100%;
+     /* flex-wrap: wrap;
+     overflow: auto; */
+}
+
+main .principal{
+    background-color: rgba(30, 13, 68, 68%);
+}
+
+main .card-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card .card-text {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #352657b2;
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.card {
+  width: 150px;
+  margin: 10px;
+  background-color: #ffffff6d;
+
+  border: 1px solid #ffffff6d;
+  border-radius: 4px;
+  padding: 8px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.card img {
+  max-width: 100%;
+  margin-bottom: 8px;
+  border-radius: 4px;
+
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.card img:hover{
+    -webkit-transform: scale(1.5);
+    transform: scale(1.1);
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #007bff;
+}
+
+.card p del {
+  color: #999;
+  font-size: 14px;
+  margin-left: 4px;
+}
+
+.card p:last-child {
+  font-size: 14px;
+  color: rgba(0, 128, 0, 0.696);
+  margin-top: 4px;
+}
+
+aside{
+    flex: 1 1 100vw; 
+    /* height: 350px; */
+}
+
+aside .carrossel {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .imagens {
+    display: flex;
+    width: 300%; /*100%*/
+    animation: slide 5s infinite;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-1512px);
+    }
+  }
+  
+  .imagens img {
+    width: 33.33%; /*100%*/
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .anterior,
+  .proximo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #6a197dfd;
+    background-color: rgba(0, 0, 0, 0.071);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .anterior {
+    left: 10px;
+  }
+  
+  .proximo {
+    right: 10px;
+  }
+  
+
+footer {
+    flex: 1 1 100vw; 
+    width: 100%;
+    height: 150px;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  footer div {
+    /* display: inline-block; */
+    width: 33.33%;
+    text-align: center;
+  }
+  
+  .elemento1 {
+    /* background-color: #f00; */
+  }
+  
+  .elemento2 {
+    /* background-color: #0f0; */
+  }
+  
+  .elemento3 {
+    /* background-color: #00f; */
+    text-align: end;
+  }
+
+footer a{
+    margin: 2.5%;
+    font-size: 17pt;
+
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover{
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+@media only screen and ( max-width: 923px){ 
+    header {
+        order: 0; 
+    }
+
+    aside {
+        flex: 1 1 100vw;
+        height: 100px;
+        order: 1;
+    }
+
+    main { 
+        height: calc(100vh - 330px);
+        order: 2;
+    }
+
+    footer {
+        order: 3;
+    }
+}
+
+@media only screen and (max-width: 717px) {
+    #openMenu, #closeMenu {
+        display: block;
+    }
+
+    #openMenu{
+        margin-left: auto;
+    }
+
+    #closeMenu{
+        position: fixed;
+        right: 15px;
+        top: 15px;
+    }
+
+    nav{
+        position: fixed;
+        flex-direction: column;
+        width: 100vw;
+        height: 100%;
+        /* background: rgba(255, 255, 255, 0.8); */
+        background-color: rgba(30, 13, 68, 68%);
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        display: none;
+        opacity: 0;
+        transition: 0.3s;
+    }
+}
