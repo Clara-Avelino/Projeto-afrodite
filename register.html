@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecte-se</title>
+    <link rel="stylesheet" href="./src/css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./src/img/logo-afrodite-circulo.png" alt="Logo da Loja" width="100px">
+            </a>
+        </div>
+        <h3 class="texto-logo">Cadastre-se em nossa loja</h3>
+        <!-- Formulário de Cadastro -->
+        <form action="#" class="form">
+            <!-- Campo de E-mail -->
+            <div class="field email-field">
+                <div class="input-field">
+                    <input type="email" placeholder="Digite seu E-mail" class="email" required/>
+                </div>
+                <!-- Mensagem de Erro para E-mail Inválido -->
+                <span class="error email-error">
+                    <i class="bx bx-error-circle error-icon"></i>
+                    <p class="error-text">Por favor digite um email válido</p>
+                </span>
+            </div>
+            <!-- Campo de Criação de Senha -->
+            <div class="field create-password">
+                <div class="input-field">
+                    <input type="password" placeholder="Digite sua Senha" class="password" required/>
+                    <i class="bx bx-hide password-hide"></i>
+                </div>
+                <!-- Mensagem de Erro para Senha Inválida -->
+                <span class="error password-error">
+                    <i class="bx bx-error-circle error-icon"></i>
+                    <p class="error-text">
+                        Digite pelo menos 8 caracteres com número, símbolo, letras minúsculas e maiúsculas.
+                    </p>
+                </span>
+            </div>
+            <!-- Campo de Confirmação de Senha -->
+            <div class="field confirm-password">
+                <div class="input-field">
+                    <input type="password" placeholder="Confirme sua senha" class="confirm-password" required/>
+                    <i class="bx bx-hide password-hide"></i>
+                </div>
+                <!-- Mensagem de Erro para Confirmação de Senha -->
+                <span class="error confirm-error">
+                    <i class="bx bx-error-circle error-icon"></i>
+                    <p class="error-text">A senha não corresponde.</p>
+                </span>
+            </div>
+            <!-- Botão de Envio -->
+            <div class="field button-field input-field">
+                <a href="./login.html">
+                    <input type="submit" value="Cadastrar"/>
+                </a>
+            </div>
+            <!-- Links para login e esqueci minha senha -->
+            <div>
+                <p  class="links">Já possui uma conta?<a href="./login.html"> Faça seu login</a></p>
+                <p class="links">Esqueceu sua senha?<a href="./recover_password.html"> Recupere aqui</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="./src/js/login.js"></script>
+</body>
+</html>
