@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conecte-se</title>
     <link rel="stylesheet" href="./src/css/login.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -23,7 +25,8 @@
                 </div>
                 <!-- Mensagem de Erro para E-mail Inválido -->
                 <span class="error email-error">
-                    <i class="bx bx-error-circle error-icon"></i>
+                    <i class="fas fa-exclamation-circle error-icon"></i>
+                    <!-- <i class="bx bx-error-circle error-icon"></i> -->
                     <p class="error-text">Por favor digite um email válido</p>
                 </span>
             </div>
@@ -31,16 +34,16 @@
             <div class="field create-password">
                 <div class="input-field">
                     <input type="password" placeholder="Digite sua Senha" class="password" required/>
-                    <i class="bx bx-hide password-hide"></i>
                 </div>
                 <!-- Mensagem de Erro para Senha Inválida -->
                 <span class="error password-error">
-                    <i class="bx bx-error-circle error-icon"></i>
+                    <i class="fas fa-exclamation-circle error-icon"></i>
                     <p class="error-text">
                         Digite pelo menos 8 caracteres com número, símbolo, letras minúsculas e maiúsculas.
                     </p>
                 </span>
             </div>
+
             <!-- Campo de Confirmação de Senha -->
             <div class="field confirm-password">
                 <div class="input-field">
@@ -49,7 +52,7 @@
                 </div>
                 <!-- Mensagem de Erro para Confirmação de Senha -->
                 <span class="error confirm-error">
-                    <i class="bx bx-error-circle error-icon"></i>
+                    <i class="fas fa-exclamation-circle error-icon"></i>
                     <p class="error-text">A senha não corresponde.</p>
                 </span>
             </div>
@@ -67,6 +70,6 @@
         </form>
     </div>
 
-    <script src="./src/js/login.js"></script>
+    <script src="./src/js/login.js"></script>   
 </body>
 </html>
