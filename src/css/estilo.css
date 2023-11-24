@@ -184,6 +184,9 @@ aside .carrossel {
     right: 10px;
   }
   
+  .moudura{
+    margin-top: 10px;
+  }
 
 footer {
     flex: 1 1 100vw; 
